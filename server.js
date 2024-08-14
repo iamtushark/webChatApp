@@ -29,7 +29,7 @@ io.on('connection', socket=>{
     const user = userJoin(socket.id, username, room);
     socket.join(user.room);
 
-    socket.emit('message', formatMessage(bot, 'Welcome to my chatApp'));
+    socket.emit('message', formatMessage(bot, 'Welcome to my chatApp CICD'));
 
     socket.broadcast.to(user.room).emit('message', formatMessage(bot,`${user.username} joined the chat`));
   
